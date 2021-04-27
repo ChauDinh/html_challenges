@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(33, 32, 44);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(49, 27, 78);
+  border-radius: 10px;
+  height: 446px;
+  margin: 0 200px;
+}
+
+.card_information {
+  height: 100%;
+  flex-grow: 1;
+  padding: 65px 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #f2f2f2;
+}
+
+.card_title {
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.card_title > span {
+  color: blueviolet;
+}
+
+.card_subtitle {
+  flex-grow: 1;
+  font-weight: 100;
+  line-height: 30px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.card_stats {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.card_stat {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.card_stat > span {
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.card_image {
+  height: 100%;
+  position: relative;
+  background-image: url(./images/image-header-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 446px;
+  border-radius: 0 10px 10px 0;
+}
+
+.card_image-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(202, 48, 202);
+  opacity: 0.5;
+  border-radius: 0 10px 10px 0;
+}
+
+.card_image > img {
+  border-radius: 0 10px 10px 0;
+}
+
+.attribution {
+  color: #f2f2f2;
+  margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+  body {
+    height: 100%;
+  }
+  .card_wrapper {
+    flex-direction: column-reverse;
+    margin: auto 40px;
+    height: 100%;
+  }
+
+  .card_information {
+    padding: 65px 50px;
+  }
+
+  .card_title {
+    font-size: 36px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .card_subtitle {
+    padding: 0 20px;
+    text-align: center;
+    font-weight: 300;
+  }
+
+  .card_stats {
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card_stat {
+    margin-top: 10px;
+  }
+
+  .card_stat > span {
+    font-size: 26px;
+    font-weight: 800;
+  }
+
+  .card_image {
+    width: 100%;
+    background-image: url(./images/image-header-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .card_image-layer {
+    border-radius: 10px 10px 0px 0px;
+  }
+}
